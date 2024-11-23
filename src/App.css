@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf3ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: #0055a3;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping */
+  gap: 20px;
+}
+
+.column {
+  flex: 1; /* Ensures both columns are flexible */
+  min-width: 300px; /* Ensures minimum width for narrow screens */
+}
+
+
+.chart-wrapper {
+  width: 250px; /* Set fixed chart size */
+  height: 250px; /* Set fixed chart size */
+  margin: 0 auto; /* Center chart */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-user-dropdown {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-dropdown {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.container {
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0055a3;
+  color: white;
+}
+
+.navbar-user-dropdown {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-dropdown {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 450px; /* Adjust height to fit the smaller chart */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.column {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column.half {
+  width: 48%;
+}
+
+.column.full {
+  width: 100%;
+}
+
+ 
+
+.pie-chart {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #2365b0 0% 21%,   /* Face to Face */
+    #418cd2 21% 42%, /* Other */
+    #67afe1 42% 63%, /* Phone */
+    #91ccf3 63% 82%, /* Email */
+    #0055a3 82% 100% /* InPerson */
+  );
+  margin: 0 auto;
+}
+
+.labels {
+  margin-top: 20px;
+}
+
+.labels div {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.color-box {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.face-to-face { background-color: #2365b0; }
+.other { background-color: #418cd2; }
+.phone { background-color: #67afe1; }
+.email { background-color: #91ccf3; }
+.inperson { background-color: #0055a3; }
+
+select {
+  padding: 10px;
+  font-size: 14px;
+  width: 200px;
+  border: 1px solid #d9eaff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #dfe7f2;
+}
+
+th {
+  background-color: #f0f8ff;
+  color: #0055a3;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eef6ff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #0055a3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #003d7c;
+}
+
+.page-info {
+  font-size: 14px;
+  align-self: center;
 }
